@@ -5,16 +5,14 @@ return {
       require("scrollbar").setup()
     end,
   },
-  -- install this package 'nacro90/numb.nvim'
   ["nacro90/numb.nvim"] = {
     config = function()
       require("numb").setup()
     end,
   },
   ["phaazon/hop.nvim"] = {
-    branch = "v2", -- optional but strongly recommended
+    branch = "v2",
     config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
       require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
     end,
   },
@@ -57,8 +55,6 @@ return {
       wilder.set_option(
         "renderer",
         wilder.popupmenu_renderer {
-          -- 'single', 'double', 'rounded' or 'solid'
-          -- can also be a list of 8 characters, see :h wilder#popupmenu_palette_theme() for more details
           highlighter = wilder.basic_highlighter(),
           left = { " ", wilder.popupmenu_devicons() },
           right = { " ", wilder.popupmenu_scrollbar() },
@@ -73,7 +69,6 @@ return {
       require "custom.plugins.null-ls"
     end,
   },
-  ["Pocco81/TrueZen.nvim"] = {},
 
   ["neovim/nvim-lspconfig"] = {
     config = function()
