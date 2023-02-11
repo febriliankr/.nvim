@@ -6,7 +6,7 @@ M.ui = {
     hl_override = {},
     changed_themes = {},
     theme_toggle = {"tokyonight", "one_light"},
-    theme = "gruvbox", -- default theme
+    theme = "ayu-dark", -- default theme
     transparency = true
 }
 
