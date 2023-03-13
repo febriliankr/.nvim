@@ -1,6 +1,12 @@
 -- lua/custom/mappings
 local M = {}
 
+M.copilot = {
+  i = {
+    ["<C-J>"] = { "<cmd> copilot#Accept()<CR>", "Accept completition", opts = { silent = true, expr = true } },
+  },
+}
+
 M.general = {
   n = {
     ["<leader>s"] = { "<cmd> w <CR>", "save file" },
@@ -13,6 +19,8 @@ M.trouble = {
     ["<leader>fr"] = { "<cmd> FzfLua registers<CR>", "find registers" },
   },
   n = {
+    -- Commands
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
     -- Journaling
     ["<leader>rd"] = { "<cmd> r!jdate<CR>", "insert journal date" },
     ["<leader>rt"] = { "<cmd> r!date<CR>", "insert date" },
