@@ -14,6 +14,35 @@ M.general = {
   },
 }
 
+M.tabufline = {
+  plugin = true,
+
+  n = {
+    -- cycle through buffers
+    ["<TAB>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "goto next buffer",
+    },
+
+    ["<S-Tab>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "goto prev buffer",
+    },
+
+    -- close buffer + hide terminal buffer
+    ["<C-x>"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "close buffer",
+    },
+  },
+}
+
 -- more keybinds!
 M.trouble = {
   v = {
@@ -55,14 +84,6 @@ M.trouble = {
     -- TroubleToggle
     ["<leader>x"] = { "<cmd>TroubleToggle<cr>" },
     ["<leader>fl"] = { "<cmd>TroubleToggle loclist<cr>" },
-
-    -- Buffer
-    ["<C-x>"] = {
-      function()
-        require("core.utils").close_buffer()
-      end,
-      "close buffer",
-    },
 
     -- Leader g for navigation
     ["<leader>gw"] = { "<cmd>HopWord<cr>" },
