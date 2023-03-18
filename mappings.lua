@@ -76,18 +76,13 @@ M.trouble = {
     },
 
     -- Golang Tags
-    ["gtj"] = { "<cmd> GoAddTag json <cr>", "Add json tag" },
-    ["gtd"] = { "<cmd> GoAddTag db<cr>" },
-    ["gtb"] = { "<cmd> GoAddTag json db<cr>" },
+    ["gtj"] = { "<cmd> GoAddTag json<cr>", "Add json tag" },
+    ["gtd"] = { "<cmd> GoAddTag json db<cr>" },
     ["gtx"] = { "<cmd> GoClearTag <cr>" },
 
     -- TroubleToggle
     ["<leader>x"] = { "<cmd>TroubleToggle<cr>" },
     ["<leader>fl"] = { "<cmd>TroubleToggle loclist<cr>" },
-
-    -- Leader g for navigation
-    ["<leader>gw"] = { "<cmd>HopWord<cr>" },
-    ["<leader>gc"] = { "<cmd>HopChar1<cr>" },
   },
 }
 
