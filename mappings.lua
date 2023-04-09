@@ -77,7 +77,7 @@ M.trouble = {
 
     -- Golang Tags
     ["gtj"] = { "<cmd> GoAddTag json<cr>", "Add json tag" },
-    ["gtd"] = { "<cmd> GoAddTag json db<cr>" },
+    ["gtd"] = { "<cmd> GoAddTag db<cr>" },
     ["gtx"] = { "<cmd> GoClearTag <cr>" },
 
     -- TroubleToggle
